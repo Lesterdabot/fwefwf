@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hunted
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,8 +26,6 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: gradle-${{ hashFiles('**/*.gradle*') }}
-      - name: List files
-        run: ls -la
       - name: Grant execute permission
         run: chmod +x gradlew
       - name: Build
@@ -33,5 +34,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: hunted-mod-jar
-          path: build/libs/*.jar
+          path: hunted/build/libs/*.jar
           retention-days: 30
