@@ -158,8 +158,8 @@ public class HuntedEventManager {
             if (slot >= chest.getContainerSize()) break;
             String[] parts = entry.trim().split(" ");
             int count = parts.length > 1 ? parseSafe(parts[1], 1) : 1;
-            var item = net.neoforged.neoforge.registries.ForgeRegistries.ITEMS
-                .getValue(ResourceLocation.tryParse(parts[0]));
+           var item = net.minecraft.core.registries.BuiltInRegistries.ITEM
+    .get(ResourceLocation.tryParse(parts[0]));
             if (item != null) chest.setItem(slot, new ItemStack(item, count));
             slot++;
         }
