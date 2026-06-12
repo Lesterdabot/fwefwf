@@ -6,11 +6,7 @@ license     = "MIT"
 modId       = "hunted"
 version     = "1.0.0"
 displayName = "Hunted"
-description = '''
-Server event: a cursed item spawns in a chest after a prep countdown.
-Whoever holds it is broadcast to all players with live coords + direction.
-Kill the target to steal the item and become the new target.
-'''
+description = "Server hunt event mod."
 
 [[dependencies.hunted]]
     modId        = "neoforge"
