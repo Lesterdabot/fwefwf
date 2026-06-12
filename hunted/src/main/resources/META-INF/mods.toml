@@ -1,0 +1,27 @@
+modLoader   = "javafml"
+loaderVersion = "[1,)"
+license     = "MIT"
+
+[[mods]]
+modId       = "hunted"
+version     = "1.0.0"
+displayName = "Hunted"
+description = '''
+Server event: a cursed item spawns in a chest after a prep countdown.
+Whoever holds it is broadcast to all players with live coords + direction.
+Kill the target to steal the item and become the new target.
+'''
+
+[[dependencies.hunted]]
+    modId        = "neoforge"
+    type         = "required"
+    versionRange = "[21.1,)"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+[[dependencies.hunted]]
+    modId        = "minecraft"
+    type         = "required"
+    versionRange = "[1.21.1,)"
+    ordering     = "NONE"
+    side         = "BOTH"
